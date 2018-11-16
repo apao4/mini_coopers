@@ -36,9 +36,10 @@ if (isset($_GET["modelNo"])) { //does it have a model number key and if it does,
     while($row = mysqli_fetch_assoc($result)) {
       $rows[] = $row;
     }
+    echo json_encode($rows);
 }
 
 
 //encode the result and send it back
-echo json_encode($rows);
+
 ?>
